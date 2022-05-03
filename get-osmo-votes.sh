@@ -21,7 +21,7 @@ printf "\n\nGetting votes from $num delegators...\n\n"
 
 while read p; do
   printf "\nCheck delegator $p..."
-  osmosisd query gov vote $prop $p --node $node 2> /dev/null | grep option | head -1 >> votes.log
+  osmosisd query gov vote $prop $p --node $node | grep option | head -1 >> votes.log
 done <delegators.log
 
 yes="$(grep -o -i YES votes.log | wc -l)"
