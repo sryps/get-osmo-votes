@@ -14,7 +14,7 @@ read -p "Enter the validator address (osmovaloper1vmkt...)  : " valAddress
 valAddress=${valAddress:-osmovaloper1vmkt6ysppk8m4rhlq78tpqyh429lhlsah4mn3y}
 
 printf "\n\nLooking for delegators..."
-osmosisd query staking delegations-to $valAddress --node $node | grep delegator_address | awk '{print $2}' > delegators.log
+osmosisd query staking delegations-to $valAddress --node $node 2>/dev/null | grep delegator_address | awk '{print $2}' > delegators.log
 
 num="$(wc -l < delegators.log)"
 printf "\n\nGetting votes from $num delegators...\n\n"
