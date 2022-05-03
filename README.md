@@ -6,5 +6,5 @@ Copy and paste into terminal:
 
 `bash <(curl -s https://raw.githubusercontent.com/sryps/get-osmo-votes/main/get-osmo-votes.sh)`
 
-<i>*must have osmosisd binary already installed</i>
+<i>*must have osmosisd binary already installed</i><br>
 <i>*must be an active prop</i>
