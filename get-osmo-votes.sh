@@ -9,7 +9,7 @@ abstain="0"
 node="https://osmosis.validator.network:443"
 
 printf "\n\n"
-read -p "Enter the active prop # to query:  " prop
+read -p "Enter the active prop # to query (must be an active prop):  " prop
 read -p "Enter the validator address (osmovaloper1vmkt...)  : " valAddress
 valAddress=${valAddress:-osmovaloper1vmkt6ysppk8m4rhlq78tpqyh429lhlsah4mn3y}
 
